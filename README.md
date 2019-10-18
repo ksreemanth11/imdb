@@ -11,20 +11,30 @@ Assumptions:
 How to run in local mode:
 
 Step:1 Create a new folder for input sources under Documents folder(assuming using Mac laptop)
+
 Step:2 Downlad all the files from https://datasets.imdbws.com/. 
+
 Step:3 Clone project from https://github.com/ksreemanth11/imdb.git
+
 Step:4 Import the project into intellij Idea IDE.
+
 Step:5 Auto import all the dependencies.
+
 Step:6 Edit src/main/resources/application.conf
+
 		change root_dir = "/Users/nanivani/Documents/imdb-data" to the path created in Step:1
+
 Step:7 Build the project
+
 Step:8 For the solution to Q-1 Goto to src/main/scala/com/imdb/TopMovies.scala and right-click and RUN to execute.
+
 Step:9 For the solution to Q-2 Goto to src/main/scala/com/imdb/TopMovieWatchers.scala and right-click and RUN to execute
 
 
 How to run in Cluster mode:
 
 Step:1 From src/main/scala/com/imdb/TopMovies.scala & src/main/scala/com/imdb/TopMovieWatchers.scala
+
 edit "SparkSession.builder().master("local").appName("IMDB Case Study").getOrCreate()" to remove ".master("local")" 
 
 Step:2 Build and create a jar with sbt-assembly
